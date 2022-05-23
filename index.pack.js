@@ -1235,15 +1235,44 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Dice(props) {
     var styles = {
-        backgroundColor: props.isHeld ? "#59E391" : "white"
+        backgroundColor: props.isHeld ? "#3F704D" : "tomato"
     };
+    var diceValue = void 0;
+    switch (props.value) {
+        case 1:
+            diceValue = "first-face";
+            break;
+        case 2:
+            diceValue = "second-face";
+            break;
+        case 3:
+            diceValue = "third-face";
+            break;
+        case 4:
+            diceValue = "forth-face";
+            break;
+        case 5:
+            diceValue = "fifth-face";
+            break;
+        case 6:
+            diceValue = "sixth-face";
+            break;
+    }
+
+    function getSpanElements(n) {
+        var indents = [];
+        for (var i = 0; i < n; i++) {
+            indents.push(_react2.default.createElement("span", { className: "dot", key: i }));
+        }
+        return indents;
+    }
 
     return _react2.default.createElement(
         "div",
-        { style: styles, className: "each-dice", onClick: function onClick() {
+        { style: styles, className: "dice " + diceValue, onClick: function onClick() {
                 return props.heldDice(props.id);
             } },
-        props.value
+        getSpanElements(props.value)
     );
 }
 

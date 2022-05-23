@@ -71,3 +71,176 @@ main button:focus {
 main button:active {
     box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
+
+.dice {  
+    padding: 4px;  
+    background-color: tomato;  
+    width: 104px;  
+    height: 104px;  
+    border-radius: 10%;
+}
+/* .dot {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color:white;
+} */
+
+.first-face {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "a1 a2 a3"
+    "a4 a5 a6"
+    "a7 a8 a9";
+    justify-items: center;
+    align-items: center;
+}
+.first-face .dot {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    grid-area: a5;
+}
+.second-face {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "a1 a2 a3"
+    "a4 a5 a6"
+    "a7 a8 a9";
+    justify-items: center;
+    align-items: center;
+}
+.second-face .dot {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    grid-area: a1;
+}
+
+.second-face .dot:nth-of-type(2) {
+    grid-area: a9;
+}
+.third-face {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "a1 a2 a3"
+    "a4 a5 a6"
+    "a7 a8 a9";
+    justify-items: center;
+    align-items: center;
+}
+.third-face .dot {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    grid-area: a1;
+}
+
+.third-face .dot:nth-of-type(2) {
+    grid-area: a5;
+}
+
+.third-face .dot:nth-of-type(3) {
+    grid-area: a9;
+}
+
+.forth-face {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "a1 a2 a3"
+    "a4 a5 a6"
+    "a7 a8 a9";
+    justify-items: center;
+    align-items: center;
+}
+.forth-face .dot {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    grid-area: a1;
+}
+
+.forth-face .dot:nth-of-type(2) {
+    grid-area: a3;
+}
+
+.forth-face .dot:nth-of-type(3) {
+    grid-area: a7;
+}
+
+.forth-face .dot:nth-of-type(4) {
+    grid-area: a9;
+}
+
+.fifth-face {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "a1 a2 a3"
+    "a4 a5 a6"
+    "a7 a8 a9";
+    justify-items: center;
+    align-items: center;
+}
+.fifth-face .dot {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    grid-area: a1;
+}
+
+.fifth-face .dot:nth-of-type(2) {
+    grid-area: a3;
+}
+
+.fifth-face .dot:nth-of-type(3) {
+    grid-area: a5;
+}
+
+.fifth-face .dot:nth-of-type(4) {
+    grid-area: a7;
+}
+
+.fifth-face .dot:nth-of-type(5) {
+    grid-area: a9;
+}
+
+.sixth-face {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "a1 a2"
+    "a3 a4"
+    "a5 a6";
+    justify-items: center;
+    align-items: center;
+}
+.sixth-face .dot {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+}
+
