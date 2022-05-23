@@ -5,6 +5,8 @@ Access the game [Here](https://vermouthyyj.github.io/Tenzies-Game/)
 
 ![Components Structure](/img/struct.png "structure")
 
+## Basic features
+
 1. function `heldDice` that takes `id` as a parameter, so that the program can figure out with `<Dice />` is clicked.
 2. Update the `heldDice` function to flip the `isHeld` property on the object in the array that was clicked, based on the `id` prop passed into the function.
 3. Update the `handleClick` function to not just roll all new dice, but instead to look through the existing dice to NOT role any that are being `held`.
@@ -17,3 +19,13 @@ Access the game [Here](https://vermouthyyj.github.io/Tenzies-Game/)
 - If tenzies is true, use the "react-confetti" package to render the <Confetti /> component 🎉
 
 8. Allow the user to play a new game when the button is clicked and they've already won.
+
+## Advanced features
+
+1. CSS grid: put real dots on the dice
+2. useEffect Hook: Track the number of rolls
+3. useEffect Hook: define the timer
+   `const timer = setTimeout(() => setSeconds(prev => prev+1) , 1000)`
+   and clear the Timer
+   `clearTimeout(timer)`
+4. localStorage: save the players' best time to localStorage
