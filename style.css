@@ -5,14 +5,19 @@
 body {
     margin: 0;
     background-color: #0B2434;
-    padding: 5%;
+    padding: 5vmin;
     font-family: "Karla", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
     background-color: #F5F5F5;
-    height: 100%;
-    max-width: 100%;
+    height: 90vmin;
+    /* max-width: 150vmin; */
+    min-width: 160vmin;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -21,12 +26,12 @@ main {
 }
 
 .game-title {
-    font-size: 5vh;
+    font-size: 5vmin;
 }
 
 .game-instruction {
     margin-top: 2%;
-    font-size: 3vh;
+    font-size: 2vmin;
 }
 
 .dice-container {
@@ -38,6 +43,7 @@ main {
     grid-template-rows: 50% 50%;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
+    
 }
 
 .each-dice {
@@ -57,10 +63,10 @@ main {
 main button {
     margin-top: 5%;
     background-color: #5035FF;
-    width: 20%;
-    height: 10%;
+    width: 50vmin;
+    height: 10vmin;
     color: #FFFFFF;
-    font-size: 300%;
+    font-size: 6vmin;
     border-radius: 5%;
 }
 
@@ -73,10 +79,10 @@ main button:active {
 }
 
 .dice {  
-    padding: 4px;  
+    padding: 1vh;  
     background-color: tomato;  
-    width: 104px;  
-    height: 104px;  
+    width: 12vmin;  
+    height: 12vmin;  
     border-radius: 10%;
 }
 /* .dot {
@@ -100,8 +106,8 @@ main button:active {
 }
 .first-face .dot {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 3vmin;
+    height: 3vmin;
     border-radius: 50%;
     background-color: white;
     grid-area: a5;
@@ -119,8 +125,8 @@ main button:active {
 }
 .second-face .dot {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 3vmin;
+    height: 3vmin;
     border-radius: 50%;
     background-color: white;
     grid-area: a1;
@@ -142,8 +148,8 @@ main button:active {
 }
 .third-face .dot {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 3vmin;
+    height: 3vmin;
     border-radius: 50%;
     background-color: white;
     grid-area: a1;
@@ -170,8 +176,8 @@ main button:active {
 }
 .forth-face .dot {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 3vmin;
+    height: 3vmin;
     border-radius: 50%;
     background-color: white;
     grid-area: a1;
@@ -202,8 +208,8 @@ main button:active {
 }
 .fifth-face .dot {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 3vmin;
+    height: 3vmin;
     border-radius: 50%;
     background-color: white;
     grid-area: a1;
@@ -238,8 +244,8 @@ main button:active {
 }
 .sixth-face .dot {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 3vmin;
+    height: 3vmin;
     border-radius: 50%;
     background-color: white;
 }
