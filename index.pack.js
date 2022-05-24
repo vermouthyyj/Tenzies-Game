@@ -1144,11 +1144,17 @@ function App() {
         left = _React$useState6[0],
         setLeft = _React$useState6[1];
 
+    var _React$useState7 = _react2.default.useState(0),
+        _React$useState8 = (0, _slicedToArray3.default)(_React$useState7, 2),
+        firstValue = _React$useState8[0],
+        setFirstValue = _React$useState8[1];
+
     _react2.default.useEffect(function () {
         var allHeld = dices.every(function (dice) {
             return dice.isHeld;
         });
-        var firstValue = dices[0].randomNum;
+        // const firstValue = dices[0].randomNum
+
         var allSameValue = dices.every(function (dice) {
             return dice.randomNum === firstValue;
         });
@@ -1161,7 +1167,6 @@ function App() {
             if (item.isHeld && item.randomNum === firstValue) {
                 count++;
             }
-            console.log(count);
         });
         setLeft(10 - count);
     }, [dices]);
@@ -1205,6 +1210,10 @@ function App() {
             var newDices = [];
             for (var i = 0; i < dices.length; i++) {
                 if (prevState[i].id === id) {
+                    if (firstValue === 0) {
+                        setFirstValue(prevState[i].randomNum);
+                        console.log(firstValue);
+                    }
                     newDices.push((0, _extends3.default)({}, prevState[i], { isHeld: !prevState[i].isHeld }));
                 } else {
                     newDices.push(prevState[i]);

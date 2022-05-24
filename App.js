@@ -8,10 +8,13 @@ export default function App() {
     const [dices, setDices] = React.useState(() => allNewDice())
     const [tenzies, setTenzies] = React.useState(false)
     const [left, setLeft] = React.useState(10)
+    const [firstValue, setFirstValue] = React.useState(0);
     
+
     React.useEffect(() => { 
         const allHeld = dices.every(dice => dice.isHeld)
-        const firstValue = dices[0].randomNum
+        // const firstValue = dices[0].randomNum
+
         const allSameValue = dices.every(dice => dice.randomNum === firstValue)
         if (allHeld && allSameValue) { 
             setTenzies(true)
@@ -22,7 +25,6 @@ export default function App() {
             if (item.isHeld && item.randomNum === firstValue) { 
                 count++
             }
-            console.log(count)
         })
         setLeft(10-count)
     }, [dices])
@@ -68,6 +70,9 @@ export default function App() {
             let newDices = []
             for (let i = 0; i < dices.length; i++) { 
                 if (prevState[i].id === id) {
+                    if (firstValue === 0) { 
+                        setFirstValue(prevState[i].randomNum)
+                    }
                     newDices.push({ ...prevState[i], isHeld: !prevState[i].isHeld })
                 }
                 else { 
